@@ -1,22 +1,75 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar {
+  background: #212529;
   color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.navbar__title {
+  font-size: 2rem;
+  margin-left: 4rem;
+}
+
+.navbar__menu {
+  display: none;
+  padding: 1rem;
+  width: 5rem;
+  height: 80%;
+  background: white;
+  color: black;
+}
+
+.dropdown__list {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.sidemenu {
+  background-color: #212529;
+  position: fixed;
+  right: 0;
+  width: 0;
+  top: 50px;
+  height: 40vh;
+  /* display: none; */
+  transition: 1000ms width ease-in-out;
+}
+
+.sidemenu--open {
+  background-color: #212529;
+  position: fixed;
+  right: 0;
+  width: 25vw;
+  top: 50px;
+  height: 40vh;
+  /* display: none; */
+  transition: 1000ms width ease-in-out;
+}
+
+@media (max-width: 1280px) {
+  .dropdown__list {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: block;
+    padding: 1rem;
+    width: 5rem;
+    height: 80%;
+    background: white;
+    color: black;
+    z-index: 4;
+  }
+
+  .sidemenu--open {
+    display: block;
+  }
 }
